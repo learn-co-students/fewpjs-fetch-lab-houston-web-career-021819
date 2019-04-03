@@ -1,5 +1,15 @@
 function fetchBooks() {
+  fetch('https://anapioficeandfire.com/api/books')
+    .then(function(response){
+      return response.json()
+    })
 }
+//another way:
+// function fetchBooks() {
+//   fetch('https://anapioficeandfire.com/api/books')
+//   .then(resp => resp.json());
+// }
+
 
 function renderBooks(json) {
   const main = document.querySelector('main')
